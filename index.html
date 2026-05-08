@@ -1,13 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vedant Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #050505;
+      color: white;
+    }
+
+    header {
+      padding: 40px;
+      border-bottom: 1px solid #222;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    section {
+      padding: 40px;
+      border-bottom: 1px solid #222;
+    }
+
+    .project {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    button {
+      padding: 10px;
+      background: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+      background: #111;
+      color: white;
+      border: 1px solid #333;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Vedant Dhabekar</h1>
+  <p>SaaS Architect | AI Developer</p>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>I build SaaS systems, AI workflows, and automation tools.</p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>aineed.in</h3>
+    <p>AI workflow platform</p>
+    <a href="https://aineed.in" target="_blank">Visit</a>
+  </div>
+
+  <div class="project">
+    <h3>SaaS API Systems</h3>
+    <p>Custom web apps with API integration</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <p>HTML, APIs, AI Automation, SaaS</p>
+</section>
+
+<section>
+  <h2>AI Lab</h2>
+
+  <textarea id="input" placeholder="Enter idea..."></textarea>
+  <button onclick="generate()">Generate</button>
+
+  <p id="output">Waiting...</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: Vedantdhabekar61@gmail.com</p>
+  <p>
+    <a href="https://github.com/vedantdhabekar61-bot">GitHub</a> |
+    <a href="https://linkedin.com">LinkedIn</a>
+  </p>
+</section>
+
+<script>
+function generate() {
+  let input = document.getElementById("input").value;
+  let output = document.getElementById("output");
+
+  if (!input) {
+    output.innerText = "Enter something...";
+    return;
+  }
+
+  output.innerText = "Generating...";
+
+  setTimeout(() => {
+    output.innerText = "AI SaaS idea: " + input;
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
